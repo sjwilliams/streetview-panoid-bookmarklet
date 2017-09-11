@@ -1,0 +1,25 @@
+{
+  "name": "streetview-panoid-bookmarklet",
+  "version": "1.0.0",
+  "description": "Chrome bookmarklet to extract the panorama id from a Google StreetView URL.",
+  "main": "index.js",
+  "scripts": {
+    "generate": "node_modules/.bin/bookmarklet index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sjwilliams/streetview-panoid-bookmarklet.git"
+  },
+  "keywords": [
+    "streetview"
+  ],
+  "author": "Josh Williams",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sjwilliams/streetview-panoid-bookmarklet/issues"
+  },
+  "homepage": "https://github.com/sjwilliams/streetview-panoid-bookmarklet#readme",
+  "dependencies": {
+    "bookmarklet": "0.0.6"
+  }
+}
