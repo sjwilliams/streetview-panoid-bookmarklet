@@ -6,6 +6,7 @@
 				margin: 0;
 				padding: 0;
 				font-family: arial, sans-serif;
+				font-size: 16px;
 			}
 
 			p{
@@ -33,17 +34,17 @@
 			.container{
 				margin: 10vh auto;
 				padding: 0;
-				max-width: 520px;
+				max-width: 420px;
 			}
 
 			.bookmarklet-wrapper{
 				text-align: center;
-				margin-bottom: 90px;
+				margin-top: 48px;
+				margin-bottom: 96px;
 			}
 
 			.bookmarklet-wrapper p{
 				font-size: 16px;
-				font-weight: 700;
 			}
 
 			.bookmarklet{
@@ -61,10 +62,14 @@
 
 
 		<div class="container">
+		
 			<div class="bookmarklet-wrapper">
 				<a class="bookmarklet" href="<%= bookmarklet %>">Get StreetView ID</a>
 				<p>Drag this to your bookmark bar.</p>
 			</div>
+
+			<p>Grab the code on <a href="https://github.com/sjwilliams/streetview-panoid-bookmarklet">GitHub</a>.</p>
+
 			<p>Need to find the Panorama ID of a Google StreetView manually? It's encoded in the StreetView URL between <span>!1s</span> and <span>!2e</span>. For example, <a href="https://www.google.com/maps/@36.3553537,-80.2887607,3a,75y,231.83h,83.34t/data=!3m6!1e1!3m4!1srviXpriRVAKxt77Y3D9tzg!2e0!7i3328!8i1664">this StreetView</a> includes the bolded id encoded in this string: <span>data=!3m6!1e1!3m4!1s<strong>rviXpriRVAKxt77Y3D9tzg</strong>!2e0!7i3328!8i1664</span>.</p>
 		</div>
 	</body>
