@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/sjwilliams/streetview-panoid-bookmarklet#readme",
   "dependencies": {
-    "bookmarklet": "0.0.6"
+    "bookmarklet": "0.0.6",
+    "underscore": "^1.8.3"
   }
 }

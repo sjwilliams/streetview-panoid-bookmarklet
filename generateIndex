@@ -1,0 +1,32 @@
+#!/usr/bin/env node
+
+var path = require('path');
+var fs = require('fs');
+var bookmarklet = require('bookmarklet');
+var _ = require('underscore');
+
+var package = require('./package.json');
+var srcJs = './index.js';
+var indexPath = './index.html';
+var indexTemplate = _.template(fs.readFileSync('./template.jst.html', 'utf8'));
+
+function generateIndex(e, data) {
+  if (e) {
+  	die(e.message);
+  }
+
+  data = bookmarklet.parseFile(data);
+
+  if (data.errors) {
+  	die(data.errors.join('\n'));
+  }
+
+  var code = bookmarklet.convert(data.code, data.options);
+
+	fs.writeFileSync(indexPath, indexTemplate({
+		title: package.description,
+  	bookmarklet: code
+  }));
+};
+
+fs.readFile(srcJs, 'utf8', generateIndex);

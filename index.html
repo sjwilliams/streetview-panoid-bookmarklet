@@ -1,0 +1,71 @@
+<html>
+	<head>
+		<title>Chrome bookmarklet to extract the panorama id from a Google StreetView URL.</title>
+		<style>
+			body{
+				margin: 0;
+				padding: 0;
+				font-family: arial, sans-serif;
+			}
+
+			p{
+				font-size: 13px;
+				font-weight: normal;
+				line-height: 1.6;
+				color: #333;
+			}
+
+			span{
+				padding: 1px 3px;
+				border-radius: 5px;
+				font-size: 0.9em;
+				color: #a7a7a7;
+			}
+
+			span strong{
+				color: #000;
+			}
+
+			a{
+				color: #333;
+			}
+
+			.container{
+				margin: 10vh auto;
+				padding: 0;
+				max-width: 520px;
+			}
+
+			.bookmarklet-wrapper{
+				text-align: center;
+				margin-bottom: 90px;
+			}
+
+			.bookmarklet-wrapper p{
+				font-size: 16px;
+				font-weight: 700;
+			}
+
+			.bookmarklet{
+				display: table;
+				text-decoration: none;
+				margin: 1em auto;
+				border-radius: 6px;
+				padding: 20px;
+				background-color: #333;
+				color: #fff;
+			}
+		</style>
+	</head>
+	<body>
+
+
+		<div class="container">
+			<div class="bookmarklet-wrapper">
+				<a class="bookmarklet" href="javascript:(function()%7Bvar%20body%3Ddocument.body%2CmessageEl%3Ddocument.createElement(%22div%22)%2Cre%3D%2Fhttps%3A%5C%2F%5C%2Fwww.google.com%5C%2Fmaps%5C%2F%40%5B-.%5Cd%5D%2B%2C%5B-.%5Cd%5D%2B%5CS%2Bdata%3D%5CS%2B!1s(%5CS%2B)!2e%2F%2Cresult%3Dre.exec(window.location.href)%2Cmessage%3D%22PanoID%3A%20%22%3Bresult%3Fmessage%2B%3Dresult%5B1%5D%3Amessage%3D%22PanoID%20not%20found.%22%2CmessageEl.innerHTML%3Dmessage%2Cbody.appendChild(messageEl)%2CmessageEl.style.zIndex%3D2147483647%2CmessageEl.style.position%3D%22fixed%22%2CmessageEl.style.top%3D%220%22%2CmessageEl.style.right%3D%220%22%2CmessageEl.style.fontFamily%3D%22Arial%2C%20sans-serif%22%2CmessageEl.style.fontWeight%3D%22bold%22%2CmessageEl.style.fontSize%3D%2224px%22%2CmessageEl.style.backgroundColor%3D%22%23f4ff60%22%2CmessageEl.style.color%3D%22%23000000%22%2CmessageEl.style.padding%3D%2220px%2020px%2020px%2020px%22%2Cconsole.log(message)%3B%7D)()">Get StreetView ID</a>
+				<p>Drag this to your bookmark bar.</p>
+			</div>
+			<p>Need to find the Panorama ID of a Google StreetView manually? It's encoded in the StreetView URL between <span>!1s</span> and <span>!2e</span>. For example, <a href="https://www.google.com/maps/@36.3553537,-80.2887607,3a,75y,231.83h,83.34t/data=!3m6!1e1!3m4!1srviXpriRVAKxt77Y3D9tzg!2e0!7i3328!8i1664">this StreetView</a> includes the bolded id encoded in this string: <span>data=!3m6!1e1!3m4!1s<strong>rviXpriRVAKxt77Y3D9tzg</strong>!2e0!7i3328!8i1664</span>.</p>
+		</div>
+	</body>
+</html>
