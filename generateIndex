@@ -12,13 +12,13 @@ var indexTemplate = _.template(fs.readFileSync('./template.jst.html', 'utf8'));
 
 function generateIndex(e, data) {
   if (e) {
-  	die(e.message);
+    die(e.message);
   }
 
   data = bookmarklet.parseFile(data);
 
   if (data.errors) {
-  	die(data.errors.join('\n'));
+    (data.errors.join('\n'));
   }
 
   var code = bookmarklet.convert(data.code, data.options);
