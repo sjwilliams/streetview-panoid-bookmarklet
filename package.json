@@ -4,7 +4,7 @@
   "description": "Chrome bookmarklet to extract the panorama id from a Google StreetView URL.",
   "main": "index.js",
   "scripts": {
-    "generate": "node_modules/.bin/bookmarklet index.js"
+    "generate": "./generateIndex"
   },
   "repository": {
     "type": "git",
