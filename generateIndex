@@ -23,9 +23,9 @@ function generateIndex(e, data) {
 
   var code = bookmarklet.convert(data.code, data.options);
 
-	fs.writeFileSync(indexPath, indexTemplate({
-		title: package.description,
-  	bookmarklet: code
+  fs.writeFileSync(indexPath, indexTemplate({
+    title: package.description,
+    bookmarklet: code
   }));
 };
 
