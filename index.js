@@ -1,6 +1,6 @@
 var body = document.body;
 var messageEl = document.createElement('div');
-var re = /https:\/\/www.google.com\/maps\/@[-.\d]+,[-.\d]+\S+data=\S+!1s(\S+)!2e/;
+var re = /https:\/\/www.google.com\/maps\/\S*data=\S*!1s(\S+)!2e/;
 var result = re.exec(window.location.href);
 var message = "PanoID: ";
 if (result) {
